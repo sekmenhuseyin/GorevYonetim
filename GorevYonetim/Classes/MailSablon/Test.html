@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+		table
+		{
+		    font-family:Arial,Tahoma,sans-serif;
+            font-size:10pt;
+		}
+        table tr th
+        {
+           text-align:left;
+        }
+		table td
+		{
+		   border:1px solid #ddd;
+		   padding:3px;
+		} 
+    </style>
+
+</head>
+<body>
+
+    <table cellspacing="0" cellpadding="3" style="background-color: White; border-color: #E7E7FF; border-width: 1px; border-style: solid; width: 1085px; border-collapse: collapse;">
+        <tr style="color: #F7F7F7; background-color: #4A3C8C; font-weight: bold;">
+            <th style="width: 70px">Firma</th>
+            <th style="width: 80px">Proje</th>
+            <th style="width: 100px">Form</th>
+            <th style="width: 180px">Görev</th>
+            <th style="width: 70px">Tarih</th>
+            <th style="width: 60px">Süre(dk)</th>
+            <th style="width: 440px">Çalışmalar </th>
+            <th style="width: 80px">Yedek Alındımı</th>
+        </tr>
+        <tr style="color: #4A3C8C; background-color: #E7E7FF;">
+            <td><span style="display: inline-block;">'+@Firma+'</span> </td>
+            <td><span style="display: inline-block;">'+@Proje+'</span> </td>
+            <td><span style="display: inline-block;">'+@Form+'</span> </td>
+            <td><span style="display: inline-block;">'+@Gorev+'</span> </td>
+            <td><span style="display: inline-block;"></span> </td>
+            <td style="text-align: right"><span style="display: inline-block;">'+
+				                      </span> </td>
+            <td><span style="display: inline-block;"></span> </td>         
+			<td><span style="display: inline-block; color: red; font-weight: bold"></span> </td>
+        </tr>
+         <tr style="color: #4A3C8C; background-color: #E7E7DD;">
+            <td><span style="display: inline-block;">'+@Firma+'</span> </td>
+            <td><span style="display: inline-block;">'+@Proje+'</span> </td>
+            <td><span style="display: inline-block;">'+@Form+'</span> </td>
+            <td><span style="display: inline-block;">'+@Gorev+'</span> </td>
+            <td><span style="display: inline-block;"></span> </td>
+            <td style="text-align: right">&nbsp;</td>
+            <td><span style="display: inline-block;"></span> </td>         
+			<td><span style="display: inline-block; color: red; font-weight: bold"></span> </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,653 @@
+﻿
+/* ------- BEGIN GENEL   -------  */
+.panelInfo
+{
+   margin: 0px auto;
+}
+.tdlab
+{
+    padding-top:1px;
+    margin-top:10px;
+    width:100px;
+    font-size:14px;
+    font-weight:bold !important;
+    text-align:center;
+}
+
+.tdlab1
+{
+    padding-top:1px;
+    margin:0;
+    width:120px;
+    font-size:14px;
+    font-weight:bold !important;
+    text-align:center;
+}
+
+.tdlab2
+{
+    padding-top:1px;
+    margin:0;
+    width:90px;
+    font-size:14px;
+    font-weight:bold !important;
+    text-align:center;
+}
+
+.tdcontent
+{
+    margin-top:6px;
+	width:230px;
+    padding-top:1px;
+    font-size:13px;
+	font-weight:200;
+    white-space:nowrap;
+	line-height:42px;
+}
+
+.tdcontent2
+{
+    padding-top:1px;
+    font-size:13px;
+	font-weight:200;
+    white-space:nowrap;
+	height:70px;
+}
+.tdcontent3
+{
+    padding-top:1px;
+    font-size:13px;
+	font-weight:200;
+    white-space:nowrap;
+	height:122px;
+}
+.tdcontent4
+{
+    padding-top:1px;
+    font-size:13px;
+	font-weight:200;
+    white-space:nowrap;
+	height:110px;
+}
+.ddlCls
+{
+    border:1px solid #7070BF;
+}
+
+.popupPanelCls
+{
+    position:relative;
+    top: 0px;
+    left: 0px;
+    display:none;
+}
+#popupAltDiv
+{
+    height:30px;  
+}
+#popupAltDiv div
+{
+    float:right;
+    margin-right:1px;
+}
+.btnCss
+{
+    width:90px;
+    margin:0px 5px;
+    font-size:14px;
+    font-weight:bold;
+}
+.hideKolon
+{
+    display:none;
+}
+.modalBackground 
+{
+	background-color:Black;
+	filter:alpha(opacity=30);
+	opacity:0.3;
+}
+.gridEkDosyaCls
+{
+  
+}
+	.gridEkDosyaCls td
+	{
+		padding:3px;
+	}
+	.gridEkDosyaCls th
+	{
+		padding:3px;
+	}
+.panelEkDosyalarCls
+{
+   position:absolute;
+   top:25px;
+   left:2px;
+   display:none;
+}
+.panelKlavuzDosyaCls
+{
+   position:absolute;
+   top:25px;
+   left:2px;
+   display:none;
+}
+.btnKlavuzEkDosya:hover
+{
+	font-weight:bold;
+	background-color:#00a2d9;
+	color:white;
+}
+
+
+.ClsRight
+{
+    text-align:right;
+}
+
+.editPopupProjeTanim
+{
+     height: 186px;
+     width: 400px;
+     border: 6px solid #363670;
+     border-radius: 14px;
+     padding:0;
+     background-color: #BFBFD1;
+     color:#323131;
+     font-size: 12px;
+     font-weight: bold;
+}
+.editPopupProjeTanim2
+{
+     height: 182px;
+     width: 360px;
+     border: 6px solid #363670;
+     border-radius: 14px;
+     padding:0;
+     background-color: #BFBFD1;
+     color:#323131;
+     font-size: 12px;
+     font-weight: bold;
+}
+
+.tableCls td,th
+{
+    padding:4px;
+}
+
+.table2Cls
+{
+	padding: 0px;
+	margin:0px;
+}
+	.table2Cls td
+	{
+		padding:0px;
+		margin:0px;
+	}
+
+.table3Cls
+{
+	padding: 0px;
+	margin:0px;
+	margin-top:10px;
+	margin-left:10px;
+	font-size:12px;
+
+}
+	.table3Cls td,th
+	{
+		padding:2px;
+		margin-left:2px;
+	}
+
+/* Popup Görev Edit Form */
+.editPopupPanel
+{
+	height: 480px;
+	width: 960px;
+	border: 6px solid #363670;
+	border-radius: 12px;
+	padding: 0;
+	background-color: #BFBFD1;
+	color: #323131;
+	font-size: 13px;	
+}
+
+.editPopupPanelCus
+{
+	height: 440px;
+	width: 960px;
+	border: 6px solid #363670;
+	border-radius: 12px;
+	padding-top: 10px;
+	background-color: #BFBFD1;
+	color: #323131;
+	font-size: 13px;	
+}
+
+.editPopupPanel2
+{
+	height: 440px;
+	width: 960px;
+	border: 6px solid #363670;
+	border-radius: 12px;
+	padding-top: 10px;
+	background-color: #BFBFD1;
+	color: #323131;
+	font-size: 13px;	
+}
+
+div.div_pe_baslik {	
+    height:18px;
+	
+    font-size:14px;
+	font-weight:bold;
+	color:#2a2929;
+}
+
+/* Popup Görev Edit Form END */
+
+
+/* Popup Çalışma Gir Ekranı */
+.editPopupCalisma
+{
+    height: 462px;
+    width: 960px;
+    border: 6px solid #363670;
+    border-radius: 12px;
+    padding:0;
+    background-color: #BFBFD1;
+    color:#323131;
+    font-size: 13px;
+	font-weight:200;
+}
+
+#anaDiv {
+	margin:10px;
+	padding:10px;
+	height:312px;
+	width:900px;
+	background-color:silver;
+}
+div.baslik {
+    height:18px;
+    width:900px;
+    font-size:14px;
+	font-weight:bold;
+	color:#2a2929;
+}
+div.satir {
+    height:30px;
+    width:900px;
+}
+div.satir2 {
+    height:90px;
+     width:900px;
+}
+div.satir3 {
+    height:96px;
+    width:900px;
+}
+div.satir4 {
+    height:114px;
+    width:900px;
+}
+/* Popup Çalışma Gir Ekranı END */
+
+
+/* Düzenle -> Çalışmalar sayfası */
+.editPopupCalismaC
+{
+    height: 500px;
+    width: 880px;
+    border: 6px solid #363670;
+    border-radius: 12px;
+    padding:0;
+    background-color: #BFBFD1;
+    color:#323131;
+    font-size: 12px;
+    font-weight: bold;
+}
+#anaDivC {
+	padding:10px;
+	height:450px;
+	width:860px;
+	background-color:silver;
+}
+div.baslikC {
+    height:18px;
+    width:750px;
+    font-size:14px;
+	font-weight:bold;
+	color:#2a2929;
+}
+div.satirC {
+    height:26px;
+    width:840px;
+}
+div.satirC2 {
+    height:30px;
+    width:840px;
+}
+div.satirC3 {
+    height:142px;
+    width:850px;
+}
+div.satirC4 {
+    height:156px;
+    width:850px;
+}
+/* Düzenle -> Çalışmalar sayfası END */
+
+
+
+/* Popup Hareket ve Popup Çalişmalar Ekranı */
+.PopupHareketler
+{
+    height: 446px;
+    width: 676px;
+    border: 6px solid #363670;
+    border-radius: 12px;
+    padding:0;
+    background-color: #BFBFD1;
+    color:#323131;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#divHareket, #divCalismalar
+{
+	height:437px;
+	width:666px;
+	overflow:auto;
+    border-radius:4px;
+}
+
+#tableHareket, #tableCalismalar
+{
+	margin:0px;
+	padding:0px;
+	overflow:scroll;
+}
+#tableHareket th,  #tableCalismalar th
+{
+	background-color: #363670;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: 'Segoe UI' , Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 14px;
+}
+#tableHareket td,  #tableCalismalar td
+    { 
+		padding:4px; border:#4e95f4 1px solid;
+	}
+	#tableHareket tr, #tableCalismalar tr
+    {
+		background: #b8d1f3;
+	}
+	#tableHareket tr:nth-child(odd), #tableCalismalar tr:nth-child(odd)
+    { 
+		background: #b8d1f3;
+	}
+	#tableHareket tr:nth-child(even), #tableCalismalar tr:nth-child(even)
+    {
+		background: #dae5f4;
+	}
+/* Popup Hareket Ekranı END */
+
+/* Popup Hareket Detay Ekranı */
+.PopupHareketDetay
+{
+    height: 414px;
+    width: 576px;
+    border: 6px solid #363670;
+    border-radius: 12px;
+    padding:0;
+    background-color: #BFBFD1;
+    color:#323131;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#divHareketDetay, #divCalismaDetay
+{
+	height:410px;
+	width:572px;
+	overflow:auto;
+}
+/* Popup Hareket Detay Ekranı END */
+
+/* Popup Dürbün  BEGIN */
+.PopupDurbun
+{
+	height: 280px;
+    width: 850px;
+    border: 6px solid #363670;
+    border-radius: 12px;
+    padding:0;
+    background-color: #BFBFD1;
+    color:#323131;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#divDurbun
+{
+    height:260px;
+	width:850px;
+	overflow:auto;
+}
+
+#tableDurbun td
+{
+	padding: 4px;
+	/*border: #4e95f4 1px solid;*/
+	border: #4e95f4 1px solid;
+}
+#tableDurbun tr
+{
+	background: #b8d1f3;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 14px;
+}
+	#tableDurbun tr:nth-child(odd)
+	{
+		background-color: #363670;
+		color: #FFFFFF;
+		font-weight: bold;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 14px;
+	}
+	#tableDurbun tr:nth-child(even)
+	{
+		background: #dae5f4;
+		color: #333333;
+		font-weight: bold;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-size: 12px;
+	}
+/* Popup Dürbün  END */
+
+	
+
+.tdbaslik
+{
+    width:70px;
+    height:38px;
+    padding:0px 20px;
+    font-size:14px;
+    font-weight:bold;
+    text-align:right;    
+}
+
+.tdicerik
+{
+    width:260px;
+    height:38px;
+    padding:0px 5px;
+    line-height:28px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.chkCls
+{
+    font-size:14px;
+    font-weight:bold;
+    float:left;
+    line-height:26px;
+}
+
+.btnGorevCls
+{
+    margin-top:-5px;
+    margin-left:-16px;   
+}
+
+/* ------- END GENEL  -------  */
+
+
+/*--- CONFIRM MESAJ MODAL POPUP  ---- BEGIN */
+ .modalBackground2
+    {
+        background-color: Black;
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+    }
+    .modalMesajPopup
+    {
+        background-color: #FFFFFF;
+        width: 400px;
+        border: 3px solid #363670;
+        border-radius: 12px;
+        padding:0;  
+        z-index:100000001 !important; 
+    }
+    .modalMesajPopup .header
+    {
+        background-color: #7070BF;
+        height: 35px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        font-size:14px;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .modalMesajPopup .body
+    {
+        min-height: 50px;
+        line-height: 26px;
+        text-align: center;
+        font-weight: bold;
+        margin-top:10px;
+        font-size:13px;
+    }
+    .modalMesajPopup .footer
+    {
+        padding: 6px;
+    }
+    .modalMesajPopup .yes, .modalMesajPopup .no
+    {
+       
+        height: 24px;
+        color: White;
+        line-height: 23px;
+        text-align: center;
+        font-weight: bold;
+        font-size:14px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    .modalMesajPopup .yes
+    {
+        margin-right:5px;
+        background-color: #2FBDF1;
+        border: 1px solid #0DA9D0;
+        width:80px;
+    }
+    .modalMesajPopup .no
+    {
+        margin-right:10px;
+        background-color: #9F9F9F;
+        border: 1px solid #5C5C5C;
+        width:80px;
+    }
+/*--- CONFIRM MESAJ MODAL POPUP  ---- END */
+
+/*--- GOREV MODAL POPUP  ----- BEGIN */
+    .modalGorevPopup
+    {
+        background-color: #A9A9A9;
+        width: 400px;
+        border: 3px solid #17172F;
+        border-radius: 12px;
+        padding:0;     
+    }
+    .modalGorevPopup .header
+    {
+        background-color: #2F2F62;
+        height: 35px;
+        color: White;
+        line-height: 30px;
+        text-align: center;
+        font-size:14px;
+        font-weight: bold;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .modalGorevPopup .body
+    {
+        min-height: 50px;
+        line-height: 26px;
+        text-align: center;
+        font-weight: bold;
+        margin-top:10px;
+    }
+    .modalMesajPopup .footer
+    {
+        padding: 6px;
+    }
+    
+    .PopupGorevBtnDiv
+    {
+        float:left;
+        width:300px;
+        margin-left:64px;
+        margin-top:-5px;
+        padding:10px;
+    }
+    .PopupGorevBtn
+    {
+        padding:0;
+        margin-right:10px;
+        width:90px;
+        height:28px;
+        font-weight:bold;
+    }
+
+/*--- GOREV MODAL POPUP  ---- END */
+
+
+/*------- UPDOWN  BEGIN ------*/
+#UpDown
+{
+    display:none;
+    width:52px;
+    height:52px;
+    background-color:Silver;
+    border-radius:45%;
+    position:absolute;
+    right:30px;
+    top:50px;
+    background-image:url('/Images/down48.png');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+/*------- UPDOWN  END ------*/
+

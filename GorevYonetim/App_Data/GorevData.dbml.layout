@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GorevData">
+  <DataContextMoniker Name="/GorevDataDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b4b017a7-3efa-46fc-b5eb-e42b8dbf786c" isExpanded="false" absoluteBounds="0.5, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/EMail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82ee9e2a-ebe8-4bde-9062-d77c75086a20" absoluteBounds="0.51500000000000057, 2.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8435560e-3925-4469-b270-2d7c6098f595" isExpanded="false" absoluteBounds="2.875, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/GorevHareket" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7f75f997-af41-40b6-96a4-035d3b78c4c8" absoluteBounds="2.8900000000000006, 1.96, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2ebd7620-c456-495c-8d6e-5c8391b0305a" isExpanded="false" absoluteBounds="0.5, 1.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/Tanim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea23bc08-116d-4544-abec-27eae82b3ff1" absoluteBounds="0.51499999999999968, 1.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4eef00c5-a5a1-4f98-be7a-6cc95dc86b7f" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/Kullanici" />
+      <nestedChildShapes>
+        <elementListCompartment Id="14b794ff-794f-4151-b6d1-3a446fb33cac" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9ed7f9ac-8679-444a-bfd9-9da265ca06dd" isExpanded="false" absoluteBounds="0.5, 2, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/Ayar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d073cfc6-5f4f-442f-a1c0-d5529e49b8b6" absoluteBounds="0.51499999999999968, 2.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="adb4f814-b033-4a6a-9edb-9efe0a714c71" isExpanded="false" absoluteBounds="2.875, 1, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/GorevCalisma" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87fefdaf-4844-4a9e-9107-076e2ba2afa3" absoluteBounds="2.8899999999999997, 1.46, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8001e41-5f97-4ed1-af17-0efc6774c8c5" isExpanded="false" absoluteBounds="2.875, 2.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/EkDosya" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e44f9136-c81b-4440-8c94-15baab1c8e27" absoluteBounds="2.89, 2.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e40b7a01-343b-4626-ac13-e6a45ecd382a" isExpanded="false" absoluteBounds="2.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/Gorevler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="596dc47b-6a02-4ff6-ae52-cd679d9a0331" absoluteBounds="2.89, 0.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 0.725); (2.875 : 0.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/GorevDataDataContext/Kullanici/Kullanici_Gorevler" />
+      <nodes>
+        <classShapeMoniker Id="4eef00c5-a5a1-4f98-be7a-6cc95dc86b7f" />
+        <classShapeMoniker Id="e40b7a01-343b-4626-ac13-e6a45ecd382a" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="61829b41-1c94-410d-91b2-b6a4f6d3139e" isExpanded="false" absoluteBounds="0.5, 3, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/TatilGunleri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1612fb01-bc7a-40ac-a42a-8c763162fe81" absoluteBounds="0.51499999999999968, 3.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c756208c-c4a8-4d8c-8b2d-6d908de6cd86" isExpanded="false" absoluteBounds="0.5, 1, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/Musteri" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4aa1343-8db0-4dff-9a65-26c54026f05d" absoluteBounds="0.51499999999999968, 1.46, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4c400da8-7370-4099-aba5-20a224bc8888" isExpanded="false" absoluteBounds="2.875, 2, 2, 0.45">
+      <DataClassMoniker Name="/GorevDataDataContext/ProjeForm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="665edb32-3475-48d1-9e14-7cb0a33201cb" absoluteBounds="2.8899999999999997, 2.46, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

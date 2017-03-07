@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="GorevYonetim.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class="no-js sidebar-large">
+<head runat="server">
+
+    <title>
+        <%: Page.Title %>
+        12M Yönetim Sistemi</title>
+    <meta http-equiv="content-type" content="text/html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta content="" name="description" />
+    <meta content="themes-lab" name="author" />
+    <link href="assets/css/icons/icons.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/plugins.min.css" rel="stylesheet" />
+    <link href="assets/css/style.min.css" rel="stylesheet" />
+    <link href="assets/css/datepicker.css" rel="Stylesheet" />
+    <script type="text/javascript" src="assets/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  
+    <link href="Styles/UserControl.css" rel="stylesheet" />
+    
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+          
+    </asp:ContentPlaceHolder>
+</head>
+<body data-page="tables_dynamic">
+    <form id="Form1" runat="server">
+  <%--  <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" EnableScriptGlobalization="true">
+    </asp:ScriptManager>--%>
+    <asp:Literal ID="lblKod" runat="server" Visible="false"></asp:Literal>
+    <!-- BEGIN TOP MENU -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
+                    <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span
+                        class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a id="menu-medium" class="sidebar-toggle tooltips"><i class="glyph-icon flaticon-panels" ></i></a>
+                <a class="navbar-brand" href="#">
+                
+                    <!--VERSIYON BİLGİSİ-->                
+                    <img title="v25.07.2016" src="Images/logo/12M-2.png" alt="logo" height="32"  width="190" />                   
+                
+                </a>
+                
+            </div>
+            <div class="navbar-center">
+                <asp:Literal ID="lblFirmaAdi" runat="server"></asp:Literal>
+            </div>
+            <div class="navbar-collapse collapse">
+                            
+                <!-- BEGIN TOP NAVIGATION MENU -->
+                <ul class="nav navbar-nav pull-right header-menu">
+                    
+
+                    <!-- BEGIN USER DROPDOWN -->
+                    <li class="dropdown" id="user-header"><a href="#" class="dropdown-toggle c-white"
+                        data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                        <img src="assets/img/avatars/avatar2.png" alt="user avatar" width="30" class="p-r-5" />
+                        <span class="username">
+                            <asp:Literal ID="lblAdSoyad" runat="server"></asp:Literal></span> <i class="fa fa-angle-down p-r-10">
+                            </i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i class="glyph-icon flaticon-account"></i><asp:Label ID="labKullanici" runat="server"></asp:Label> </a></li>
+                            <li><a href="#"><i class="glyph-icon flaticon-calendar"></i>Ajandam </a></li>
+                            <li><a href="Ayarlar.aspx"><i class="glyph-icon flaticon-settings21"></i>Ayarlar </a>
+                            </li>
+                            <li class="dropdown-footer clearfix"><a href="javascript:;" class="toggle_fullscreen"
+                                title="Tam Ekran Çalış"><i class="glyph-icon flaticon-fullscreen3"></i></a><a href="/Pages/LockScreen.aspx" 
+                                    title="Kilitle"><i class="glyph-icon flaticon-padlock23"></i></a>
+                                <asp:LinkButton ID="btnCikis" runat="server" ToolTip="Güvenli Çıkış" OnClick="btnCikis_Click"><i class="fa fa-power-off"></i></asp:LinkButton>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- END USER DROPDOWN -->
+                </ul>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+        </div>
+    </nav>
+    <!-- END TOP MENU -->
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+        <!-- BEGIN MAIN SIDEBAR -->
+        <nav id="sidebar">
+            <div id="main-menu">
+                <ul class="sidebar-nav">
+                 <%--   <li class="current"><a href="Main.aspx"><i class="glyph-icon flaticon-frontend"></i><span class="sidebar-text">
+                        Ana Sayfa</span></a> </li>--%>
+                    <li id="li0" ><a href="Gorev.aspx"><i class="glyph-icon flaticon-forms"></i><span
+                        class="sidebar-text">Görevler</span></a> </li>
+
+
+                    <% if (GorevYonetim.Global.Kullanici.YetkiKod != 1)
+                       { %>
+                    
+                    <li id="li1"><a href="Calismalar.aspx"><i class="glyph-icon flaticon-calendar53"></i><span class="sidebar-text">
+                         Çalışmalar</span></a>
+                    </li>
+                   
+                    <% if (GorevYonetim.Global.Kullanici.YetkiKod > 2)
+                               { %>
+                        <li id="li3"><a href="GorevTakvimi.aspx"><i class="glyph-icon flaticon-calendar53"></i><span class="sidebar-text">
+                                Görev Takvimi</span></a>
+                        </li>
+                        <li id="li4"><a href="IzinTakvimi.aspx"><i class="glyph-icon flaticon-calendar53"></i><span class="sidebar-text">
+                                İzin Takvimi</span></a>
+                        </li>
+                    <% } %>
+                                        
+                    <li id="li2"><a href="#"><i class="glyph-icon flaticon-pages"></i><span class="sidebar-text">
+                        Tanımlar</span><span class="fa arrow"></span></a>
+                        <ul class="submenu collapse" style="clear:both">
+                            <% if (GorevYonetim.Global.Kullanici.YetkiKod > 2)
+                               { %>
+                            <li><a href="Tanimlar.aspx?tip=0"><span class="sidebar-text">Kullanıcılar</span></a></li>
+                            <li><a href="Tanimlar.aspx?tip=1"><span class="sidebar-text">Müşteriler</span></a> </li>
+                            <li><a href="Tanimlar.aspx?tip=2"><span class="sidebar-text">Müşteri Sorumluları</span></a> </li>                    
+                            <li><a href="Tanimlar.aspx?tip=3"><span class="sidebar-text">Proje</span></a> </li>
+                            <li><a href="Tanimlar.aspx?tip=4"><span class="sidebar-text">Proje-Form</span></a> </li>
+                            <% }
+                               else if (GorevYonetim.Global.Kullanici.YetkiKod > 1)
+                               { %>                   
+                            <li><a href="Tanimlar.aspx?tip=3"><span class="sidebar-text">Proje</span></a> </li>
+                            <li><a href="Tanimlar.aspx?tip=4"><span class="sidebar-text">Proje-Form</span></a> </li>
+                            <% } %>
+                        </ul>
+                    </li>
+                   <% } %>
+                                      
+
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <img src="assets/img/gradient.png" alt="gradient effet" class="sidebar-gradient-img" />
+                <div class="sidebar-footer clearfix">
+                    <a class="pull-left" href="#" rel="tooltip" data-placement="top" data-original-title="Settings">
+                        <i class="glyph-icon flaticon-settings21"></i></a><a class="pull-left toggle_fullscreen"
+                            href="#" rel="tooltip" data-placement="top" data-original-title="Fullscreen">
+                            <i class="glyph-icon flaticon-fullscreen3"></i></a><a class="pull-left" href="/Pages/LockScreen.aspx" rel="tooltip"
+    data-placement="top" data-original-title="Lockscreen"><i class="glyph-icon flaticon-padlock23">
+    </i></a><a class="pull-left" href="/Pages/Logout.aspx" rel="tooltip" data-placement="top"
+        data-original-title="Logout"><i class="fa fa-power-off"></i></a>
+                </div>
+            </div>
+        </nav>
+        <!-- END MAIN SIDEBAR -->
+
+      
+        <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+
+
+    </div>
+    <!-- END WRAPPER -->
+    
+    </form>
+
+    <!-- BEGIN MANDATORY SCRIPTS -->
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-ui/jquery-ui-1.10.4.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-select/bootstrap-select.js"></script>
+    <script type="text/javascript" src="assets/plugins/mmenu/js/jquery.mmenu.min.all.js"></script>
+    <script type="text/javascript" src="assets/plugins/nprogress/nprogress.js"></script>
+    <script type="text/javascript" src="assets/plugins/datetimepicker/jquery.datetimepicker.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="assets/plugins/pickadate/picker.js"></script>
+    <script type="text/javascript" src="assets/plugins/pickadate/picker.date.js"></script>
+    <script type="text/javascript" src="assets/js/form.js"></script>
+    <script type="text/javascript" src="assets/plugins/modal/js/classie.js"></script>
+    <script type="text/javascript" src="assets/plugins/modal/js/modalEffects.js"></script>
+    <script type="text/javascript" src="assets/plugins/datatables/dynamic/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script type="text/javascript" src="assets/plugins/datatables/dataTables.tableTools.js"></script>
+    <script type="text/javascript" src="assets/js/application.js"></script>
+    <!-- END MANDATORY SCRIPTS -->
+
+    <script type="text/javascript">
+          $(function () {
+              $("#main-menu ul.sidebar-nav li").live("click", function () {
+                  $("#main-menu ul.sidebar-nav li").removeClass("current");
+                  $(this).addClass("current");
+                    
+              });
+          });
+    </script>
+  
+   
+</body>
+</html>
